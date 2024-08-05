@@ -69,13 +69,13 @@ export default function Navbar() {
         </div>
         <ul className={`flex sm:flex-row flex-col gap-6 text-gray-200 `}>
           <li>
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="#">Feedback</a>
+            <a href="mailto:shivsatyam86@gmail.com">Feedback</a>
           </li>
           <li>
-            <a href="#">Github</a>
+            <a href="https://github.com/demss233/tex">Github</a>
           </li>
           <li>
             <a
