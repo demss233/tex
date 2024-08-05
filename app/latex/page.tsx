@@ -26,7 +26,7 @@ export default function Page() {
   return (
     <>
       <div className="sm:flex sm:flex-row flex flex-col ">
-        <div className="flex flex-col w-[40%]">
+        <div className="flex flex-col sm:w-[40%] w-[100%]">
           <button
             className="bg-[#121212]  font-semibold py-2 text-[#689d6a]"
             onClick={handleCaptureClick}
