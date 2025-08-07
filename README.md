@@ -7,7 +7,3 @@ This project is a user-friendly LaTeX and HTML editor featuring the popular "Gru
 - **Live Preview**: Instantly see your LaTeX and HTML rendered as you type.
 - **Gruvbox Theme**: Enjoy the aesthetics of the beloved Gruvbox color scheme.
 - **Screenshot Download**: Easily download a screenshot of your preview.
-
-## Design
-
-I did not really focus on the design. 
