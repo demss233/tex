@@ -7,9 +7,13 @@ import downloadjs from "downloadjs";
 import html2canvas from "html2canvas";
 import { useRef } from "react";
 
-const dummyData = `this is an example usage of this editor. for a newline you could use newline tag.
+const dummyData = `This is an example usage of this editor. <br>For a newline you could use the newline tag inside the dollar combo.<br><br>
 
-my question is, are you good at math ? try factoring $x^2 + 5x + 6$. (it also supports html)
+Here is an example of factorisation of $p(x) = x^2 + 5x + 6$ <br>
+$p(x) = x^2 + 5x + 6 = 0$ <br>
+$x^2 + 3x + 2x + 6 = 0$ <br>
+$x(x + 3) + 2(x + 3) = 0$ <br>
+$(x + 2)(x + 3) = 0$ <br>
 `;
 
 export default function Page() {
@@ -28,7 +32,7 @@ export default function Page() {
       <div className="sm:flex sm:flex-row flex flex-col ">
         <div className="flex flex-col sm:w-[40%] w-[100%]">
           <button
-            className="bg-[#121212]  font-semibold py-2 text-[#689d6a]"
+            className="bg-[#3c3836]  font-semibold py-4 text-[#ebdbb2]"
             onClick={handleCaptureClick}
           >
             Download Screenshot
@@ -36,7 +40,8 @@ export default function Page() {
           <textarea
             name="textarea"
             id="textarea"
-            className="resize-none w-full  p-2 outline-none bg-[#282828] text-[#689d6a] h-[100vh] font-semibold text-2xl placeholder-[#689d6a]"
+            className="resize-none w-full p-2 outline-none bg-[#282828] text-[#ebdbb2] h-[100vh] placeholder-[#bfae87]"
+            spellCheck="false"
             placeholder="Type some latex.."
             onChange={(e) => {
               setMath(e.target.value);
@@ -46,8 +51,9 @@ export default function Page() {
           </textarea>
         </div>
         <div
-          className="preview w-full text-2xl bg-[#32302f] sm:w-[60%] text-[#689d6a] p-2 font-semibold"
+          className="preview w-full bg-[#1d2021] sm:w-[60%] text-[#ebdbb2] p-2"
           ref={previewRef}
+          spellCheck={false}
         >
           <Latex>{math}</Latex>
         </div>
